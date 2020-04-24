@@ -16,11 +16,10 @@ class ContactData extends Component {
 
   orderHandler = (event) => {
     event.preventDefault();
-
     this.setState({ loading: true });
     const order = {
       ingredients: this.props.ingredients,
-      price: this.props.totalPrice,
+      price: this.props.price,
       customer: {
         name: "Batman",
         address: {
@@ -32,6 +31,7 @@ class ContactData extends Component {
       },
       deliverMethod: "fastest",
     };
+    console.log(order);
     axios
       .post("/orders.json", order)
       .then((respone) => {
