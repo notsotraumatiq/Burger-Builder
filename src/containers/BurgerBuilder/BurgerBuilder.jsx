@@ -61,6 +61,7 @@ class BurgerBuilder extends Component {
     ) : (
       <Spinner />
     );
+    // Function
     if (this.props.ings) {
       burger = (
         <React.Fragment>
